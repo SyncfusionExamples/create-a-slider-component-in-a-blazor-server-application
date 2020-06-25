@@ -1,0 +1,2 @@
+# create-a-slider-component-in-a-blazor-server-application
+This is a quick-start project by Syncfusion to help you create a Blazor Slider. This example explains how to create a Blazor application and add the Syncfusion Blazor package. It shows how to add the Syncfusion Blazor Slider component to a Blazor server application, enable a tooltip and slider types. It also shows how to set ticks, value limits, value formatting, and orientation.
