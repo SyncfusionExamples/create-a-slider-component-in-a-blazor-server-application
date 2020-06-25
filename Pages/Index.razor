@@ -1,0 +1,36 @@
+﻿@page "/"
+@using Syncfusion.Blazor.Inputs
+
+<SfSlider Value="40" Width="600px" Step="10" 
+          Min="0" Max="200" HtmlAttributes="@attributes">
+    <SliderTooltipData IsVisible="true"
+                       ShowOn="TooltipShowOn.Always"
+                       Placement="TooltipPlacement.After"
+                       Format="C2">
+    </SliderTooltipData>
+    <SliderTicksData Placement="Placement.After"
+                     LargeStep="20"
+                     SmallStep="10"
+                     ShowSmallTicks="true"
+                     Format="C2">
+    </SliderTicksData>
+</SfSlider>
+<SfSlider Value="40" Width="600px" Type="SliderType.MinRange">
+    <SliderTooltipData IsVisible="true"
+                       ShowOn="TooltipShowOn.Always"
+                       Placement="TooltipPlacement.After"></SliderTooltipData>
+</SfSlider>
+<SfSlider Value="@RangeValue" Width="600px" Type="SliderType.Range">
+    <SliderTooltipData IsVisible="true"
+                       ShowOn="TooltipShowOn.Always"
+                       Placement="TooltipPlacement.After"></SliderTooltipData>
+</SfSlider>
+
+@code{
+    public int[] RangeValue = { 30, 70 };
+	Dictionary<string,object> attributes = new Dictionary<string, object>()
+    {
+         {"style", "height:400px" }
+    };
+}
+
