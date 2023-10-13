@@ -1,36 +1,35 @@
 ﻿@page "/"
-@using Syncfusion.Blazor.Inputs
 
-<SfSlider Value="40" Width="600px" Step="10" 
-          Min="0" Max="200" HtmlAttributes="@attributes">
-    <SliderTooltipData IsVisible="true"
+<SfSlider Value="40" Width="600px" Step="10" Min="0" Max="200">
+    <SliderTooltip IsVisible="true"
                        ShowOn="TooltipShowOn.Always"
                        Placement="TooltipPlacement.After"
                        Format="C2">
-    </SliderTooltipData>
-    <SliderTicksData Placement="Placement.After"
+    </SliderTooltip>
+    <SliderTicks Placement="Placement.After"
                      LargeStep="20"
                      SmallStep="10"
                      ShowSmallTicks="true"
                      Format="C2">
-    </SliderTicksData>
+    </SliderTicks>
 </SfSlider>
 <SfSlider Value="40" Width="600px" Type="SliderType.MinRange">
-    <SliderTooltipData IsVisible="true"
+    <SliderTooltip IsVisible="true"
                        ShowOn="TooltipShowOn.Always"
-                       Placement="TooltipPlacement.After"></SliderTooltipData>
+                       Placement="TooltipPlacement.After"></SliderTooltip>
 </SfSlider>
 <SfSlider Value="@RangeValue" Width="600px" Type="SliderType.Range">
-    <SliderTooltipData IsVisible="true"
+    <SliderTooltip IsVisible="true"
                        ShowOn="TooltipShowOn.Always"
-                       Placement="TooltipPlacement.After"></SliderTooltipData>
+                       Placement="TooltipPlacement.After"></SliderTooltip>
 </SfSlider>
 
 @code{
     public int[] RangeValue = { 30, 70 };
-	Dictionary<string,object> attributes = new Dictionary<string, object>()
-    {
-         {"style", "height:400px" }
-    };
 }
 
+<style>
+    #default{
+        height:400px;
+    }
+</style>
